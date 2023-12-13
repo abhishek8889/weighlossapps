@@ -1,8 +1,8 @@
-# render.yaml
-
 services:
   - type: web
     name: weighlossapps
     buildCommand: npm install && npm run build
     startCommand: npm start
-   
+    env:
+      - key: NODE_ENV
+        value: production

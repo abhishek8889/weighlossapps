@@ -5,6 +5,4 @@ services:
     name: weighlossapps
     buildCommand: npm install && npm run build
     startCommand: npm start
-    env:
-        
-        value: production
+   

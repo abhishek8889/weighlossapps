@@ -6,5 +6,5 @@ services:
     buildCommand: npm install && npm run build
     startCommand: npm start
     env:
-      - key: NODE_ENV
+        key: NODE_ENV
         value: production

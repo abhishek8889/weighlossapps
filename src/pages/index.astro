@@ -1,0 +1,135 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Card from '../components/Card.astro';
+import { Image } from 'astro:assets';
+import Logo from '../images/logo.svg';
+import bellcon from '../images/bell-icon.svg';
+import fivestar from '../images/stars5.svg';
+import logoable from '../images/logo_able.svg';
+import Shieldmedia from '../images/Shield.png';
+import viberntlogo from '../images/vibrant_logo.svg';
+import glplogo from '../images/GLP.svg';
+import ablemenlogo from '../images/ablemenlogo.svg';
+import meweightlogo from '../images/meweightlogo.svg';
+import { Accordion, AccordionItem } from 'accessible-astro-components';
+---
+<Layout title="Welcome to Astro.">
+	<main>
+		<div class="header">
+			<div class="container-full">
+				<div class="header_wrapper">
+					<a href="#" class="brand">
+						<Image  src={Logo} alt="site logo"/>
+					</a>
+					<div class="notification_div">
+						<div class="notification_icon">
+							<Image  src={bellcon} alt="bell icon"></Image>
+							<span class="notification_number">1</span>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="instructions">
+			<div class="container">
+			<h3>Personal Consultations and Readings With Top Psychic Experts - <span class="yellow">November 2023</span></h3>
+			<p>
+				Get advice for your love life, find out about your ex, and get guidance on your future. Get advice for your love life, find out about your ex, and get 
+				guidance on your future. Get advice for your love life, find out about your ex, and get guidance on your future. </p>
+			</div>
+		</div>
+		<div class="cards_section">
+			<div class="container">
+				<div class="cards_wrapper">
+					<ul role="list" class="link-card-grid">
+						<Card
+							href="https://docs.astro.build/"
+							title="able"
+							offertext="Exclusive Offer"
+							appdescription="Some text here"
+							reviewnumber = "9.7"
+							uservotes="40 345 USER VOTES"
+							applogo={logoable}
+							reviewstars={fivestar}
+							shieldImg= {Shieldmedia}
+						/>
+						<Card
+							href="https://docs.astro.build/"
+							title="Vibrant life"
+							offertext="Exclusive Offer"
+							appdescription="Some text here"
+							reviewnumber="9.3"
+							uservotes="38 344 USER VOTES"
+							applogo={viberntlogo}
+							reviewstars={fivestar}
+							shieldImg= {Shieldmedia}
+						/> 
+						<Card
+							href="https://docs.astro.build/"
+							title="GLP"
+							offertext="Exclusive Offer"
+							appdescription="Some text here"
+							reviewnumber="9.1"
+							uservotes="20 678 USER VOTES"
+							applogo={glplogo}
+							reviewstars={fivestar}
+							shieldImg= {Shieldmedia}
+						/>
+						<Card
+							href="https://docs.astro.build/"
+							title="able men"
+							offertext="Exclusive Offer"
+							appdescription="Some text here"
+							reviewnumber="8.9"
+							uservotes="5 345 USER VOTES"
+							applogo={ablemenlogo}
+							reviewstars={fivestar}
+							shieldImg= {Shieldmedia}
+						/>
+						<Card
+							href="https://docs.astro.build/"
+							title="able men"
+							offertext="Exclusive Offer"
+							appdescription="Some text here"
+							reviewnumber="8.2"
+							uservotes="17 575 USER VOTES"
+							applogo={meweightlogo}
+							reviewstars={fivestar}
+							shieldImg= {Shieldmedia}
+						/>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="accordian_section">
+			<div class="container">
+				<div class="section_head">
+					<h2>Frequently Asked Questions</h2>
+				</div>
+				<div class="accrodian_wrapper">
+					<Accordion>
+						<AccordionItem
+						  header="Does Dieting Work?"
+						>
+						  <p>Dieting is effective only when combined with exercise, creating a calorie deficit. A balanced approach to dieting and exercise is essential for healthy weight loss</p>
+						</AccordionItem>
+						<AccordionItem
+						  header="Does Avoiding Carbohydrates at Night Help?"
+						>
+						  <p>Limiting carbohydrates at night can be beneficial for weight maintenance, as it may align better with the body's hormonal rhythms</p>
+						</AccordionItem>
+						<AccordionItem
+						  header="Is It Good to Skip Dinner If You Had a Large Lunch?"
+						>
+						  <p>Skipping dinner is not advisable, as it can lead to binge-eating disorders and other health problems</p>
+						</AccordionItem>
+					  </Accordion>
+				</div>
+			</div>
+		</div>
+	</main>
+</Layout>
+
+<style>
+	
+</style>

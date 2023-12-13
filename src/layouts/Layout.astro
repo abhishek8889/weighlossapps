@@ -1,0 +1,265 @@
+---
+interface Props {
+	title: string;
+	details: string;
+}
+
+
+const { title } = Astro.props;
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="generator" content={Astro.generator} />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+		<title>{title}</title>
+	</head>
+	<body>
+		<slot />
+	</body>
+</html>
+<style is:global>
+	html {
+        font-family: 'Inter', sans-serif;
+        background-color: #3588c9;
+        background-image: url("/src/images/astrobg.png");
+		background-size: cover;
+		background-repeat: no-repeat;
+		}
+		body {
+    margin: 0px;
+}
+*,:before,:after {
+    box-sizing: border-box;
+}
+  main {
+		color: white;
+		font-size: 20px;
+		line-height: 1.6;
+	}
+	.container{
+		width: 100%;
+		max-width: 1230px;
+		margin: auto;
+		padding-left: 15px;
+		padding-right: 15px;
+	}
+	.container-full {
+    width: 100%;
+    max-width: 100%;
+}
+.header {
+    background-color: rgba(255, 255, 255, 0.72);
+    padding: 17px 60px;
+}
+.header_wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.header a.brand {
+    width: 100%;
+    max-width: 350px;
+}
+	img {
+    max-width: 100%;
+    object-fit: contain;
+	max-width: 100%;
+}
+.notification_icon img {
+    height: 54px;
+}
+.notification_icon {
+    position: relative;
+}
+.notification_icon span.notification_number {
+    position: absolute;
+    top: 0px;
+    right: -14px;
+    background-color: #E0162E;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    line-height: 12px;
+}
+	.astro-a {
+		position: absolute;
+		top: -32px;
+		left: 50%;
+		transform: translatex(-50%);
+		width: 220px;
+		height: auto;
+		z-index: -1;
+	}
+	h1 {
+		font-size: 4rem;
+		font-weight: 700;
+		line-height: 1;
+		text-align: center;
+		margin-bottom: 1em;
+	}
+	.instructions p {
+    font-size: 20px;
+    line-height: 1.5;
+	max-resolution: 0px 0px 20px;
+}
+.instructions h3 {
+    font-size: 32px;
+    line-height: 1.5;
+    font-weight: 600;
+    margin: 0px 0px 15px;
+}
+ul.link-card-grid {
+    margin: 0px;
+    padding: 0px;
+}
+.instructions {
+    padding: 40px 0px 20px;
+}
+.cards_section {
+    padding-top: 30px;
+}
+span.yellow {
+    color: #FAA424;
+}
+img {
+    max-width: 100%;
+    object-fit: contain;
+	max-width: 100%;
+    height: auto !important;
+}
+ul.link-card-grid {
+    padding: 0px;
+    margin: 0px;
+    list-style: none;
+    
+}
+li.link-card {
+    background-color: #F6F6F6;
+    border-radius: 20px;
+    overflow: hidden;
+	color: #000000;
+}
+li.link-card:not(last-child) {
+    margin-bottom: 50px;
+}
+.link-card .card_content {
+    padding: 40px 30px 20px;
+}
+.link-card .card_content .card_body {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.card_body .app_col {
+    width: 40%;
+}
+.card_body .review_col {
+    width: 60%;
+    padding-left: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    display: flex;
+    align-items: center;
+}
+.review_col .best_spp_box {
+    margin-left: auto;
+    padding-right: 50px;
+    width: calc(100% - 173px);
+    text-align: right;
+}
+.review_col .best_spp_box img{
+   width: 100%;
+    max-width: 140px;
+}
+.link-card:not(:nth-child(2)) .best_spp_box {
+    display: none;
+}
+.review_box {
+    border-radius: 20px;
+    background: #30608A;
+    padding: 16px 22px;
+    margin-left: auto;
+    text-align: center;
+    color: #ffffff;
+    width: 173px;
+}
+.review_box h3 {
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    font-size: 32px;
+    margin: 0px 0px 5px;
+}
+.review_box p.user_votes {
+    font-size: 12px;
+    margin: 0px;
+}
+.app_info p {
+    font-size: 20px;
+    margin: 0px;
+    font-weight: 500;
+}
+.app_info img {
+    margin: 0px 0px 20px;
+}
+.card_footer a {
+    color: #ffffff;
+    display: block;
+    background-color: #17D11F;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 100px;
+    font-size: 24px;
+    padding: 12px 20px;
+}
+.accordion__item h3 {
+    margin: 0px;
+    padding: 0px;
+}
+.accordion__item button {
+    padding: 0px;
+    color: #FFF;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 136.151%; /* 27.23px */
+    text-transform: uppercase;
+    background-color: transparent;
+    border-radius: 20px;
+    border: 0px !important;
+}
+.accordion__item .accordion__panel {
+    border: 0px !important;
+}
+.accordion__item .accordion__panel .panel__inner {
+    padding: 1rem 0px 0px !important;
+}
+li.accordion__item {
+    border: 2px solid #FFF !important;
+    background: rgba(246, 246, 246, 0.15);
+    border-radius: 20px;
+    padding: 18px 30px;
+    margin-bottom: 30px;
+}
+.accordion__item .accordion__panel .panel__inner p {
+    margin: 0px;
+    font-size: 20px;
+    line-height: 1.5;
+}
+.accordion__item .accordion__header:focus {
+    outline-offset: -6px;
+    box-shadow: none;
+}
+</style>

@@ -1,0 +1,48 @@
+---
+import { Image } from 'astro:assets';
+interface Props {
+	href: string;
+	offertext: string;
+	uservotes:string;
+	reviewnumber:number;
+	appdescription: string;
+	applogo: ImageData;	
+	reviewstars:ImageData;
+	shieldImg:string;
+}
+
+const { href,applogo,offertext,appdescription,reviewnumber,reviewstars,uservotes,shieldImg} = Astro.props;
+---
+
+<li class="link-card">
+	<div class="card_content">
+		<div class="card_body">
+			<div class="app_col">
+				<div class="app_info">
+					<Image src={applogo} alt="app-logo"/>
+					<p class="offer_text">{offertext}</p>
+					<p class="dis_text">{appdescription}</p>
+				</div>
+			</div>
+			<div class="review_col">
+				<div class="best_spp_box">
+                    <Image src={shieldImg } alt="shield-image"/>
+				</div>
+				<div class="review_box">
+					<h3>{reviewnumber}</h3>
+					<Image src={reviewstars} alt="star-image"/>
+					<p class="user_votes">{uservotes}</p>
+				</div>
+			</div>
+		</div>
+		<div class="card_footer">
+			<a href={href} target="_blank">Install App</a>
+		</div>
+	</div>
+</li>
+<style>
+
+
+
+
+</style>
